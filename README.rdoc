@@ -1,0 +1,13 @@
+== Rails template with Bootstrap
+
+Standard rails template setup with:
+* Bootstrap 3 http://getbootstrap.com/
+* Better Errors https://github.com/charliesome/better_errors
+* Binding Of Caller https://github.com/banister/binding_of_caller
+
+To clone project locally:
+  git clone git://github.com/tedtalkstoo/template_bootstrap.git
+
+Created and maintained by @tedtalkstoo (https://twitter.com/tedtalkstoo)  
+  
+
