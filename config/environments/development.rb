@@ -38,4 +38,7 @@ Templatedevise::Application.configure do
   # To sort out issue of drop downs working across localhost and heroku
   config.serve_static_assets = false
 
+  # From devise setup
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' } 
+
 end

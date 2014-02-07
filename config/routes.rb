@@ -1,6 +1,16 @@
 Templatedevise::Application.routes.draw do
   
-  root to: 'static_pages#home'
+  devise_for :users, :controllers => {:sessions => 'sessions'}, :skip => [:registrations] 
+
+  as :user do
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    put 'users' => 'devise/registrations#update', :as => 'user_registration'
+  end
+
+  devise_scope :user do 
+    root to: 'static_pages#home'
+    match '/sessions/user', to: 'devise/sessions#create', via: :post
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

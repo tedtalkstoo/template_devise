@@ -15,6 +15,14 @@
         <li><a href="#">Things</a></li>
         <li><a href="#">Go</a></li>
         <li><a href="#">Here</a></li>
+
+        <% if user_signed_in? %>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>  
+        <% else %>
+          <li><a href="<%= new_user_session_path -%>" id="signin_link">Sign in</a></li>  
+        <% end %>
+
+
       </ul>
     </div><!--/.nav-collapse -->
   </div>
